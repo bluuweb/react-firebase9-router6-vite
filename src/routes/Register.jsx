@@ -42,7 +42,7 @@ const Register = () => {
 
     return (
         <>
-            <h1>User Register</h1>
+            <h1>Users Register</h1>
             <FormError error={errors.firebase} />
             <form onSubmit={handleSubmit(onSubmit)}>
                 <FormInput
