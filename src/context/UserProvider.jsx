@@ -14,7 +14,7 @@ const UserProvider = ({ children }) => {
 
     useEffect(() => {
         const unsusbribe = onAuthStateChanged(auth, (user) => {
-            console.log(user);
+            // console.log(user);
             if (user) {
                 const { email, photoURL, displayName, uid } = user;
                 setUser({ email, photoURL, displayName, uid });
