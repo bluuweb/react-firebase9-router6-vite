@@ -1,4 +1,4 @@
-export const formValidate = (getValues) => {
+export const formValidate = () => {
     return {
         required: {
             value: true,
@@ -7,6 +7,10 @@ export const formValidate = (getValues) => {
         patternEmail: {
             value: /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/,
             message: "Formato de email incorrecto",
+        },
+        patternURL: {
+            value: /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,
+            message: "Formato de url incorrecto",
         },
         minLength: {
             value: 6,

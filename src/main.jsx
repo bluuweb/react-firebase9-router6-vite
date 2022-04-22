@@ -6,7 +6,7 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import UserProvider from "./context/UserProvider";
 
-import "flowbite";
+// import "flowbite";
 
 ReactDOM.render(
     <BrowserRouter>

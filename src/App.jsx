@@ -1,15 +1,16 @@
+import { UserContext } from "./context/UserProvider";
 import { Routes, Route } from "react-router-dom";
 import { useContext } from "react";
-import { UserContext } from "./context/UserProvider";
 
-import Login from "./routes/Login";
-import Home from "./routes/Home";
+import NotFound from "./routes/NotFound";
 import Register from "./routes/Register";
 import Perfil from "./routes/Perfil";
-import NotFound from "./routes/NotFound";
+import Login from "./routes/Login";
+import Home from "./routes/Home";
 
 import LayoutContainerForm from "./components/layouts/LayoutContainerForm";
 import LayoutRequireAuth from "./components/layouts/LayoutRequireAuth";
+import LayoutRedirect from "./components/layouts/LayoutRedirect";
 import Navbar from "./components/Navbar";
 
 const App = () => {
@@ -33,7 +34,9 @@ const App = () => {
                     <Route path="/register" element={<Register />} />
                 </Route>
 
-                <Route path="*" element={<NotFound />} />
+                <Route path="/:nanoid" element={<LayoutRedirect />}>
+                    <Route index element={<NotFound />} />
+                </Route>
             </Routes>
         </>
     );
