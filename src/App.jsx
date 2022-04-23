@@ -11,7 +11,8 @@ import Home from "./routes/Home";
 import LayoutContainerForm from "./components/layouts/LayoutContainerForm";
 import LayoutRequireAuth from "./components/layouts/LayoutRequireAuth";
 import LayoutRedirect from "./components/layouts/LayoutRedirect";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
+import NavbarSuper from "./components/NavbarSuper";
 
 const App = () => {
     const { user } = useContext(UserContext);
@@ -22,7 +23,8 @@ const App = () => {
 
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
+            <NavbarSuper />
             <Routes>
                 <Route path="/" element={<LayoutRequireAuth />}>
                     <Route index element={<Home />} />
